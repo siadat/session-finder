@@ -1,9 +1,3 @@
-Blog post https://siadat.github.io/2015/09/11/tmux-session-management
-
-Requires [fzf](https://github.com/junegunn/fzf).
-
-Build `crystal build session-finder.cr` or download [binaries]().
-
 Suggested key bindings:
 
     set-option -g status-left   ' #(~/cloned/siadat/session-finder/session-finder status) '
