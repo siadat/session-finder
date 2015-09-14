@@ -100,6 +100,7 @@ def main
 	end
 
 	if refresh
+		sleep 0.05
 		%x(#{TMUX} refresh -S)
 	end
 end
