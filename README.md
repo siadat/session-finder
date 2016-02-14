@@ -1,6 +1,28 @@
+# session-finder
+
 Commands for session related tasks.
 
 ![Session Fuzzy Finder](http://siadat.github.io/assets/tmux/2.png)
+
+## Install
+
+	mkdir -p ~/.tmux/
+    git clone https://github.com/siadat/session-finder ~/.tmux/session-finder
+	~/.tmux/session-finder/install.bash
+
+## Usage
+
+    M-Space   new window
+    M-l       select next window
+    M-h       select prev window
+    M-Tab     select last window
+    M-L       move current window to right
+    M-H       move current window to left
+    M-Return  toggle pane fullscreen
+    M--       scroll up
+    M-+       scroll down
+
+## Usage without install.bash
 
 Print a pretty list of session names to be used by status-left:
 
