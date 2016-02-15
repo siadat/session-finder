@@ -21,8 +21,8 @@ session_status() {
 		if [ "$counter" = 0 ]; then
 			echo -n "#[bg=${colors[$colori]},fg=default]${line}#[bg=default]"
 		else
-			# Comment this line to hide other session names:
-			echo -n "|#[fg=${colors[$colori]}]${line}#[fg=default,bg=default]"
+			# Uncomment this string to show other session names as well
+			echo # -n "|#[fg=${colors[$colori]}]${line}#[fg=default,bg=default]"
 		fi
 		local counter=$((counter + 1))
 	done
