@@ -2,7 +2,7 @@
 
 Commands for session related tasks.
 
-![Session Fuzzy Finder](http://siadat.github.io/assets/tmux/2.png)
+[![asciicast](https://asciinema.org/a/azyuneip94rgxcgx001kq42bd.png)](https://asciinema.org/a/azyuneip94rgxcgx001kq42bd)
 
 ## Install
 
