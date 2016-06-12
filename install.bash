@@ -1,4 +1,4 @@
-#!/usr/bin/env bash -e
+#!/usr/bin/env bash
 dir=~/.tmux/session-finder
 config=~/.tmux.conf
 err=
@@ -13,9 +13,8 @@ hash fzf 2> /dev/null ; if [ $? -eq 1 ]; then
 fi
 
 if [ "$err" = "1" ]; then
-  echo >&2 "error:  Install dependencies using Homebrew:"
-  echo >&2 "error:    brew install fzf"
-  echo >&2 "error:  For other systems please see https://github.com/junegunn/fzf/blob/master/README.md"
+  echo >&2 "error:  fzf is require"
+  echo >&2 "error:  Please see https://github.com/junegunn/fzf/blob/master/README.md"
   echo >&2 "error:  Run this script again once fzf is installed."
   exit 1
 fi
