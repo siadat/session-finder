@@ -12,15 +12,10 @@ Commands for session related tasks.
 
 ## Usage
 
-    M-Space   new window
-    M-l       select next window
-    M-h       select prev window
-    M-Tab     select last window
-    M-L       move current window to right
-    M-H       move current window to left
-    M-Return  toggle pane fullscreen
-    M--       scroll up
-    M-+       scroll down
+    M-p       Open session finder (uses fzf)
+    M-`	      Go to next session
+    M-~	      Go to previous session
+    M-q       Go to the last session (toggle back and forth)
 
 ## Usage without install.bash
 
@@ -48,9 +43,9 @@ Switch to the previous session:
 Suggested config:
 
     set-option -g status-left ' #(./session-finder.bash status) '
+    bind-key -n 'M-p' new-window './session-finder.bash finder'
     bind-key -n 'M-`' run -b     './session-finder.bash next'
     bind-key -n 'M-~' run -b     './session-finder.bash prev'
     bind-key -n 'M-q' run -b     './session-finder.bash last'
-    bind-key -n 'M-p' new-window './session-finder.bash finder'
 
 Read [my blog post](http://siadat.github.io/tmux-session-management/) for more information.
