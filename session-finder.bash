@@ -50,14 +50,13 @@ session_next() {
 }
 
 session_finder() {
-	fzf_out=$($tmux ls -F '#{session_attached} #{?session_last_attached,,0}#{session_last_attached} #{session_name}' \
-    | grep -v '^1' \
+	fzf_out=$($tmux ls -F '#{?session_attached,0,1} #{?session_last_attached,,0}#{session_last_attached} #{?session_attached,*, } #{session_name}' \
     | sort -r \
-    | perl -pe 's/^0 [0-9]+ //' \
+    | perl -pe 's/^[01] [0-9]+ //' \
     | /home/sina/.fzf/bin/fzf --print-query --prompt="$prompt" \
     || true)
 	line_count=$(echo "$fzf_out" | wc -l)
-	session_name="$(echo "$fzf_out" | tail -n1)"
+	session_name="$(echo "$fzf_out" | tail -n1 | perl -pe 's/^[\* ] //')"
 	command=$(echo "$session_name" | awk '{ print $1 }')
 
 	if [ $line_count -eq 1 ]; then
