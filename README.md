@@ -6,9 +6,9 @@ Commands for session related tasks.
 
 ## Install
 
-	mkdir -p ~/.tmux/
+    mkdir -p ~/.tmux/
     git clone https://github.com/siadat/session-finder ~/.tmux/session-finder
-	~/.tmux/session-finder/install.bash
+    ~/.tmux/session-finder/install.bash
 
 ## Usage
 
@@ -39,7 +39,6 @@ Switch to the previous session:
 
     ./session-finder.bash prev
 
-
 Suggested config:
 
     set-option -g status-left ' #(./session-finder.bash status) '
@@ -48,4 +47,4 @@ Suggested config:
     bind-key -n 'M-~' run -b     './session-finder.bash prev'
     bind-key -n 'M-q' run -b     './session-finder.bash last'
 
-Read [my blog post](http://siadat.github.io/tmux-session-management/) for more information.
+Read [my blog post](https://siadat.github.io/post/tmux-session-management) for more information.
